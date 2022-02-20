@@ -30,11 +30,11 @@ public class GenerateObstacles : MonoBehaviour
         {
             if(Random.Range(0,2) == 0)
             {
-                addToPos += Vector3.left * 2f;
+                addToPos += Vector3.left * 2.5f;
             }
             else
             {
-                addToPos -= Vector3.left * 2f;
+                addToPos -= Vector3.left * 2.5f;
             }
             
         }
@@ -42,11 +42,11 @@ public class GenerateObstacles : MonoBehaviour
         {
             if (randomPlace == 0)
             {
-                addToPos += Vector3.left * 2f;
+                addToPos += Vector3.left * 2.5f;
             }
             else if(randomPlace == 1)
             {
-                addToPos -= Vector3.left * 2f;
+                addToPos -= Vector3.left * 2.5f;
             }
         }
         Instantiate(obstacles[randomObstacle].prefab, posToSpawn + addToPos, Quaternion.identity);

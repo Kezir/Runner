@@ -30,10 +30,16 @@ public class PlayerMovement : MonoBehaviour
     public float dodgeSpeed;
     public float jumpForce;
     public float speed;
+    private float speedAnim = 0.5f;
     private Vector3 moveVector;
     public bool alive;
+    public ParticleSystem particle;
+    public Animator anim;
+    private ParticleSystem.MainModule main;
 
     private static PlayerMovement _instance;
+    private Touch touch;
+    private Vector2 initialPosition;
 
     public static PlayerMovement Instance { get { return _instance; } }
 
@@ -56,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<CharacterController>();
         transform.position = Vector3.zero;
         InvokeRepeating("SpeedUp", 10, 10);
+        main = particle.main;
     }
 
     void Update()
@@ -79,6 +86,13 @@ public class PlayerMovement : MonoBehaviour
     private void SpeedUp()
     {
         speed += 0.1f;
+        main.startSpeedMultiplier += 0.5f;
+        anim.SetFloat("Blend", speedAnim);
+        if(speedAnim<1f)
+        {
+            speedAnim += 0.05f;
+        }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -113,9 +127,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Inputs()
     {
-        left = Input.GetKeyDown(KeyCode.LeftArrow);
-        right = Input.GetKeyDown(KeyCode.RightArrow);
-        up = Input.GetKeyDown(KeyCode.UpArrow);
+        left = SwipeManager.swipeLeft;//Input.GetKeyDown(KeyCode.LeftArrow);
+        right = SwipeManager.swipeRight;//Input.GetKeyDown(KeyCode.RightArrow);
+        up = SwipeManager.swipeUp;//Input.GetKeyDown(KeyCode.UpArrow);
     }
 
     private bool CheckForCollisions(Side _side)

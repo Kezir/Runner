@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4385619633150150458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec380db12b4e4864098df34a0f16d4d2, type: 3}
+  m_Name: d6f7d731-7681-4f23-b1ed-4d29eb5d071f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Jak sie nazywasz ?
+  children:
+  - 1736debc-8a61-4bc2-bf78-9713f60c84ee
+  - 6a51890c-11c9-4615-8126-2c4b3cfa6126
+  rect:
+    serializedVersion: 2
+    x: 131
+    y: 167
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3628098862654632342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec380db12b4e4864098df34a0f16d4d2, type: 3}
+  m_Name: 22d82fb4-b049-4ccc-babe-910e85f243b1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Klamiesz
+  children:
+  - d6f7d731-7681-4f23-b1ed-4d29eb5d071f
+  rect:
+    serializedVersion: 2
+    x: 658
+    y: 259
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1678518558551653451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec380db12b4e4864098df34a0f16d4d2, type: 3}
+  m_Name: 137f1759-0b32-468d-bf8d-795254bbd850
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: A ja Zdzichu
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 657
+    y: 53
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1672828780190993158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec380db12b4e4864098df34a0f16d4d2, type: 3}
+  m_Name: 1736debc-8a61-4bc2-bf78-9713f60c84ee
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Ben
+  children:
+  - 137f1759-0b32-468d-bf8d-795254bbd850
+  rect:
+    serializedVersion: 2
+    x: 394
+    y: 53
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68abd1ced89e70b4eb82037e65558e29, type: 3}
+  m_Name: New Dialogue
+  m_EditorClassIdentifier: 
+  newNodeOffset: {x: 250, y: 0}
+  nodes:
+  - {fileID: -4385619633150150458}
+  - {fileID: -1672828780190993158}
+  - {fileID: -1678518558551653451}
+  - {fileID: 4578888045353746466}
+  - {fileID: -3628098862654632342}
+--- !u!114 &4578888045353746466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec380db12b4e4864098df34a0f16d4d2, type: 3}
+  m_Name: 6a51890c-11c9-4615-8126-2c4b3cfa6126
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Kezir
+  children:
+  - 22d82fb4-b049-4ccc-babe-910e85f243b1
+  rect:
+    serializedVersion: 2
+    x: 395
+    y: 288
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
